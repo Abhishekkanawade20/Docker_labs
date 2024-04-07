@@ -1,5 +1,5 @@
 FROM centos:7
-RUN sudo yum update -y
+#RUN sudo yum update -y
 RUN sudo yum install java -y
 ADD https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.100/bin/apache-tomcat-8.5.100.tar.gz /opt
 WORKDIR /opt/apache-tomcat-8.5.100/bin
