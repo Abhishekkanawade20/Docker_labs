@@ -1,0 +1,13 @@
+# Here we are writing comose file to automate docker steps like image run, port mapping, volume creation
+
+services:
+  frontendnginxfirst:
+    build: /root/Docker_labs/Nginx
+    ports:
+      - '80:80'
+    container_name: nginxfrontendcontainer
+    volumes:
+      - myvol:/usr/share/nginx/html
+    network_mode: 
+      bridge
+
