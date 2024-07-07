@@ -7,7 +7,7 @@ services:
       - '80:80'
     container_name: nginxfrontendcontainer
     volumes:
-      - myvol:/usr/share/nginx/html
+      - myvol:/usr/share/nginx/html/  
     network_mode: 
       bridge
 
