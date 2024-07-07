@@ -1,13 +1,13 @@
 # Here we are writing comose file to automate docker steps like image run, port mapping, volume creation
 
-services:
-  frontendnginxfirst:
-    build: /root/Docker_labs/Nginx_dockerfile
+services:                       # default synstax
+  frontendnginxfirst:           # naming convention for container
+    build: /root/Docker_labs/Nginx_dockerfile  # location of dockerfile which we have to run
     ports:
-      - '80:80'
-    container_name: nginxfrontendcontainer
+      - '80:80'              # exposing port
+    container_name: nginxfrontendcontainer # providing name to container 
     volumes:
-      - myvol:/usr/share/nginx/html/  
+      - myvol: /usr/share/nginx/html  # adding volume  
     network_mode: 
       bridge
 
